@@ -1,11 +1,16 @@
 /* Fonts */
 
+@font-face {
+    font-family: calculator;
+    src: url(./fonts/Technology.ttf);
+}
 
 /* Background (Outsourced but edited to suit) */
 
 body {
     color: white;
     display: flex;
+    font-family: calculator;
     justify-content: center;
     align-items: center;
     margin: 0;
@@ -42,14 +47,30 @@ body {
     position: absolute;
     top: 0px;
     right: 0px;
+    font-family: calculator;
+    font-size: 2.5em;
     text-decoration: none;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
     color: black;
     border: none;
-    margin: 2em;
+    margin: 0.55em;
 }
 
 #code:hover {
     transform: scale(1.03);
     transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Main Calculator section */
+
+.calc {
+    background-color: blue;
+    width: 30em;
+    height: 45em;
+    margin-top: 4em;
+    border-radius: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
