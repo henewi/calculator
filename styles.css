@@ -1,4 +1,4 @@
-
+/* Fonts */
 
 
 /* Background (Outsourced but edited to suit) */
@@ -43,4 +43,13 @@ body {
     top: 0px;
     right: 0px;
     text-decoration: none;
+    background-color: white;
+    color: black;
+    border: none;
+    margin: 2em;
+}
+
+#code:hover {
+    transform: scale(1.03);
+    transition: all .2s ease-in-out;
 }
