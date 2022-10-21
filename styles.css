@@ -112,6 +112,10 @@ body {
     font-weight: 900;
 }
 
+.btn:hover {
+    cursor: pointer;
+}
+
 .btna {
     color: white;
     font-size: 40px;
@@ -124,6 +128,10 @@ body {
     font-weight: 900;
 }
 
+.btna:hover {
+    cursor: pointer;
+}
+
 .btnb {
     background-color: rgb(145, 145, 145);
     border: none;
@@ -131,4 +139,8 @@ body {
     font-family: sfpro;
     font-size: 40px;
     font-weight: 900;
+}
+
+.btnb:hover {
+    cursor: pointer;
 }
