@@ -91,7 +91,7 @@ equalsButton.addEventListener('click', button => {
     calculator.updateDisplay()
 })
 
-getDisplayNumber(number) {
+getDisplayNumber(number); {
     const floatNumber = parseFloat(number)
     if (isNaN(floatNumber)) return ''
     return floatNumber.toLocaleString('en')
