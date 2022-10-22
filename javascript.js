@@ -34,10 +34,40 @@ appendNumber(number); {
 }
 
 compute(); {
-}
+    let computation
+    const prev = parseFloat(this.previousOperand)
+    const current = parseFloat(this.currentOperand)
+    if (isNaN(prev) || isNaN(current)) return
+    switch (this.operation) {
+        case '+':
+            computation = prev+current
+            break
+        case '-':
+            computation = prev-current
+            break
+        case 'x':
+            computation = prev*current
+            break
+        case '/':
+            computation = prev/current
+            break
+        default:
+            return
+    }
+    this.currentOperand = computation
+    this.operation = undefined
+    this.previousOperand = ''
+ }
 
 updateDisplay(); {
-    this.currentOperandTextElement.innerText = this.currentOperand
+    this.currentOperandTextElement.innerText =
+      this.getDisplayNumber(this.currentOperand)
+    if (this.operation != null) {
+      this.previousOperandTextElement.innerText =
+        `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+    } else {
+      this.previousOperandTextElement.innerText = ''
+    }
 }
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
@@ -45,13 +75,24 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.appendNumber(button.innerText)
-        calculator.updateDisplay
+        calculator.updateDisplay()
     })
 })
 
 operationButtons.forEach(button => {
     button.addEventListener('click', () => {
         calculator.chooseOperation(button.innerText)
-        calculator.updateDisplay
+        calculator.updateDisplay()
     })
 })
+
+equalsButton.addEventListener('click', button => {
+    calculator.compute()
+    calculator.updateDisplay()
+})
+
+getDisplayNumber(number) {
+    const floatNumber = parseFloat(number)
+    if (isNaN(floatNumber)) return ''
+    return floatNumber.toLocaleString('en')
+}
