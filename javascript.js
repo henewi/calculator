@@ -22,18 +22,18 @@ class Calculator {
     }    
 }
 
-chooseOperation(operation); { 
+function chooseOperation(operation) { 
     if (this.currentOperand === '') return
     if (this.previousOperand !== '') {
         this.compute
     }
 }
 
-appendNumber(number); {
+function appendNumber(number) {
     this.currentOperand = this.currentOperand.toString() + number.toString()
 }
 
-compute(); {
+function compute() {
     let computation
     const prev = parseFloat(this.previousOperand)
     const current = parseFloat(this.currentOperand)
@@ -59,7 +59,7 @@ compute(); {
     this.previousOperand = ''
  }
 
-updateDisplay(); {
+function updateDisplay() {
     this.currentOperandTextElement.innerText =
       this.getDisplayNumber(this.currentOperand)
     if (this.operation != null) {
@@ -68,6 +68,12 @@ updateDisplay(); {
     } else {
       this.previousOperandTextElement.innerText = ''
     }
+}
+
+function getDisplayNumber(number) {
+    const floatNumber = parseFloat(number)
+    if (isNaN(floatNumber)) return ''
+    return floatNumber.toLocaleString('en')
 }
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
@@ -91,8 +97,3 @@ equalsButton.addEventListener('click', button => {
     calculator.updateDisplay()
 })
 
-getDisplayNumber(number); {
-    const floatNumber = parseFloat(number)
-    if (isNaN(floatNumber)) return ''
-    return floatNumber.toLocaleString('en')
-}
