@@ -1,10 +1,9 @@
 // Clear button //
-const clearBtn = document.getElementById('clearBtn')
-const screencontent = document.getElementById('screencontent')
-clearBtn.addEventListener('click', clear)
-function clear() {
-    screencontent.textContent=''
-}
+clear() {
+    this.currentOperand = ''
+    this.previousOperand = ''
+    this.operation = undefined
+  }
 
 // Main button workings // 
 
