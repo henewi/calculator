@@ -4,7 +4,7 @@
 }
 
 
-/* Background (Outsourced but edited to suit) */
+/* Background */
 
 body {
     color: white;
@@ -63,20 +63,28 @@ body {
 
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: Gotham Rounded, sans-serif;
+    font-family: sfpro;
     font-weight: normal;
   }
   
   body {
     padding: 0;
     margin: 0;
-    background: linear-gradient(to right, #00AAFF, #00FF6C);
+    background-color: black;
   }
   
+  .numerico {
+    background-color: rgb(58, 58, 58);
+    border-radius: 100%;
+    font-family: sfpro;
+    color: white;
+  }
+
   .calculator-grid {
     display: grid;
     justify-content: center;
     align-content: center;
+    grid-gap: 14px;
     min-height: 100vh;
     grid-template-columns: repeat(4, 100px);
     grid-template-rows: minmax(120px, auto) repeat(5, 100px);
@@ -85,9 +93,8 @@ body {
   .calculator-grid > button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid white;
+    border: none;
     outline: none;
-    background-color: rgba(255, 255, 255, .75);
   }
   
   .calculator-grid > button:hover {
