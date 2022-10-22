@@ -101,7 +101,7 @@ body {
     grid-gap: 1.3em;
 }
 
-.btn {
+.data-number {
     color: white;
     font-size: 40px;
     height: 80px;
@@ -113,11 +113,11 @@ body {
     font-weight: 900;
 }
 
-.btn:hover {
+.data-number:hover {
     cursor: pointer;
 }
 
-.btna {
+.data-operation {
     color: white;
     font-size: 40px;
     background-color: orange;
@@ -129,7 +129,7 @@ body {
     font-weight: 900;
 }
 
-.btna:hover {
+.data-operation:hover {
     cursor: pointer;
 }
 
