@@ -1,21 +1,3 @@
-// Clear button //
-const clearBtn = document.getElementById('clearBtn')
-const screencontent = document.getElementById('screencontent')
-clearBtn.addEventListener('click', clear)
-function clear() {
-    screencontent.textContent=''
-}
-
-// Main Consts // 
-
-const numberButtons = document.querySelectorAll('[data-number]')
-const operationButtons = document.querySelectorAll('[data-operation]')
-const equalsButton = document.querySelector('[data-equals]')
-const deleteButton = document.querySelector('[data-delete]')
-const allClearButton = document.querySelector('[data-all-clear]')
-const previousOperandTextElement = document.querySelector('[data-previous-operand]')
-const currentOperandTextElement = document.querySelector('[data-current-operand]')
-
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
       this.previousOperandTextElement = previousOperandTextElement
@@ -103,6 +85,17 @@ class Calculator {
     }
   }
   
+  
+  const numberButtons = document.querySelectorAll('[data-number]')
+  const operationButtons = document.querySelectorAll('[data-operation]')
+  const equalsButton = document.querySelector('[data-equals]')
+  const deleteButton = document.querySelector('[data-delete]')
+  const allClearButton = document.querySelector('[data-all-clear]')
+  const previousOperandTextElement = document.querySelector('[data-previous-operand]')
+  const currentOperandTextElement = document.querySelector('[data-current-operand]')
+  
+  const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
+  
   numberButtons.forEach(button => {
     button.addEventListener('click', () => {
       calculator.appendNumber(button.innerText)
@@ -130,4 +123,5 @@ class Calculator {
   deleteButton.addEventListener('click', button => {
     calculator.delete()
     calculator.updateDisplay()
-  })  
+  })
+  
