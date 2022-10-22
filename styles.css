@@ -91,6 +91,30 @@ body {
   .otherthing {
     background-color: lightgrey;
     border-radius: 100%;
+    font-family: sfpro;
+    font-weight: 600;
+  }
+
+  .github {
+    background-color: lightgrey;
+    border-radius: 100%;
+  }
+
+  #git {
+    height: 90px;
+    margin-top: 3px;
+    margin-left: -1px;
+  }
+
+  .apple {
+    background-color: rgba(211, 211, 211, 0);
+    border-radius: 100%;
+  }
+
+  #apl {
+    height: 90px;
+    margin-top: 3px;
+    margin-left: -1px;
   }
 
   .calculator-grid {
@@ -108,10 +132,6 @@ body {
     font-size: 2rem;
     border: none;
     outline: none;
-  }
-  
-  .calculator-grid > button:hover {
-    background-color: rgba(255, 255, 255, .9);
   }
   
   .output {
