@@ -16,10 +16,10 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 
 class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
-        this.previousOperandTextElement = previousOperandTextElement
-        this.currentOperandTextElement = currentOperandTextElement
-    }    
-}
+      this.previousOperandTextElement = previousOperandTextElement
+      this.currentOperandTextElement = currentOperandTextElement
+      this.clear()
+    }
 
 function chooseOperation(operation) { 
     if (this.currentOperand === '') return
