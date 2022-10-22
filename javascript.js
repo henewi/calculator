@@ -18,7 +18,6 @@ class Calculator {
     constructor(previousOperandTextElement, currentOperandTextElement) {
         this.previousOperandTextElement = previousOperandTextElement
         this.currentOperandTextElement = currentOperandTextElement
-        this.clear()
     }    
 }
 
@@ -80,7 +79,8 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
-        calculator.appendNumber(button.innerText)
+        calculator.appendNumber(button.innerText) 
+        console.log(appendNumber)
         calculator.updateDisplay()
     })
 })
